@@ -1,0 +1,6 @@
+text,label,priority
+"My app keeps crashing and I lose data","negative","urgent"
+"I love the new update, it's fantastic","positive","low"
+"Payment failed on checkout, very bad","negative","high"
+"Feature request: add dark mode","neutral","low"
+"Server down, customers cannot access the product","negative","urgent"

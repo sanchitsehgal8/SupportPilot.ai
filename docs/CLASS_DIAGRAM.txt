@@ -1,0 +1,37 @@
+Class Diagram (highlight of main Python classes)
+
+backend.models:
+- User
+- Ticket
+- Comment
+- Attachment
+- AgentPerformance
+- Notification
+- AuditLog
+
+backend.services:
+- TicketService
+- UserService
+- CommentService
+- NotificationService
+- AnalyticsService
+- TicketAssignmentEngine
+
+backend.ml:
+- MLPreprocessor
+- SentimentAnalyzer
+- PriorityPredictor
+- KeywordExtractor
+
+backend.utils:
+- SupabaseClient
+- JWTUtils
+- Validators
+- ErrorHandler
+
+Controllers assemble services and expose endpoints:
+- AuthController
+- TicketController
+- AnalyticsController
+
+Note: The project uses OOP-style services and models with 17+ classes across modules.

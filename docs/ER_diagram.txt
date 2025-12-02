@@ -1,0 +1,55 @@
+Simple ER Diagram (textual)
+
+users (user_id PK)
+  - user_id
+  - email
+  - name
+  - role
+  - is_active
+
+tickets (ticket_id PK)
+  - ticket_id
+  - customer_id -> users.user_id
+  - title
+  - description
+  - priority
+  - status
+  - assigned_agent_id -> users.user_id
+  - sentiment_score
+  - category
+  - created_at
+
+comments (comment_id PK)
+  - comment_id
+  - ticket_id -> tickets.ticket_id
+  - author_id -> users.user_id
+  - content
+  - is_internal
+
+attachments (attachment_id PK)
+  - attachment_id
+  - ticket_id -> tickets.ticket_id
+  - author_id -> users.user_id
+  - file_name
+  - file_url
+
+agent_performance (agent_id PK)
+  - agent_id -> users.user_id
+  - tickets_resolved
+  - average_response_time
+  - customer_satisfaction_score
+
+notifications (notification_id PK)
+  - notification_id
+  - user_id -> users.user_id
+  - title
+  - message
+  - related_ticket_id -> tickets.ticket_id
+
+audit_logs (log_id PK)
+  - log_id
+  - user_id -> users.user_id
+  - action
+  - entity_type
+  - entity_id
+  - changes
